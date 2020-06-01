@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
+import { BlogCard } from './components/blog-card'
+
+const TestContainer = styled.div`
+width: 100vw;
+height: 100vh;
+box-sizing: border-box;
+padding: 5em 13rem;
+background: black;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TestContainer>
+      <BlogCard
+      tags={["node", 'ts']}
+      timestamp='MAR 03, 2019'
+      title="AWS SNS: Sending SMS Messages within Node.js APP"
+      color="#654"
+      briefing="One of the most common 
+      features explained with a full example"
+      />
+    </TestContainer>
   );
 }
 
