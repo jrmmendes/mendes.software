@@ -1,26 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import { GhostLink } from './components/ghost-link'
-import { BrowserRouter as Router } from 'react-router-dom'
 
-const TestContainer = styled.div`
+import { PageSection } from './layouts/page-section'
+
+const Main = styled.main`
 display: flex;
 width: 100vw;
 height: 100vh;
 box-sizing: border-box;
-padding: 5em 5rem;
+margin: 0;
+padding: 0;
 background: black;
 `
 
 function App() {
   return (
-    <TestContainer>
-      <Router>
-        <GhostLink to="#">
-          Click me
-        </GhostLink>
-      </Router>
-    </TestContainer>
+    <Main>
+      <PageSection title='Test Section'>
+      </PageSection>
+    </Main>
   );
 }
 

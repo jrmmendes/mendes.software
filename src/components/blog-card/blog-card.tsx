@@ -10,7 +10,7 @@ import {
   TopColor,
 } from './elements'
 
-type BlogCardProps = {
+export interface BlogCard {
   tags: string[];
   timestamp: string;
   title: string;
@@ -18,7 +18,7 @@ type BlogCardProps = {
   color: string;
 }
 
-export default function(props: BlogCardProps) {
+export default function(props: BlogCard) {
   return (
     <Container>
       <TopColor style={{background: props.color}}/>
