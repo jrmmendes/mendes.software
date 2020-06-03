@@ -18,6 +18,15 @@ padding: 0.8em;
   color: black;
   background: #FFF;
 }
+
+&.disabled {
+  cursor: default;
+  opacity: 0.6;
+  &:hover {
+    color: white;
+    background: none;
+  }
+}
 ` 
 
 export default GhostLink;

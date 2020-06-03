@@ -24,7 +24,12 @@ function App() {
       <PageSection title='Latest From Blog'>
         <BlogCardGroup cards={posts} />
         <Router>
-          <GhostLink style={{ width: '14.4rem', marginTop: '2em' }}to="/blog"> All Posts </GhostLink>
+          <GhostLink
+            className='disabled'
+            style={{ width: '14.4rem', marginTop: '2em' }}
+            to="">
+              All Posts (WIP)
+          </GhostLink>
         </Router>
       </PageSection>
     </Main>
