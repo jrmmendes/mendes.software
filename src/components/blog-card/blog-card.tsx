@@ -10,9 +10,10 @@ import {
   TopColor,
 } from './elements'
 
-export interface BlogCardProps {
+export type BlogCardProps = {
   key?: any;
   style?: any;
+  link: string;
   tags: string[];
   timestamp: string;
   title: string;
@@ -23,17 +24,19 @@ export interface BlogCardProps {
 export function BlogCard(props: BlogCardProps) {
   return (
     <Container>
-      <TopColor style={{background: props.color}}/>
-      <CardHeader>
-      {props.tags.map((tag, i) => (
-        <Tag key={i}> #{tag} </Tag>
-      ))}
+      <a style={{ textDecoration: 'none' }} href={props.link} target="_new">
+        <TopColor style={{background: props.color}}/>
+        <CardHeader>
+        {props.tags.map((tag, i) => (
+          <Tag key={i}> #{tag} </Tag>
+        ))}
 
         <Timestamp>{props.timestamp}</Timestamp>
       </CardHeader>
 
       <Title> {props.title} </Title>
       <Briefing> {props.briefing} </Briefing>
-    </Container>
+    </a>
+  </Container>
   )
 }

@@ -8,12 +8,15 @@ type PageSectionProps = {
 
 const Title = styled.h1`
   color: white;
+  font-size: 1.5rem;
   font-weight: 300;
 `
 
 const Container = styled.section`
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  padding: 1rem 4rem;
+  padding: 1rem 6rem;
   width: 100%;
 `
 

@@ -7,11 +7,16 @@ font-size: 1em;
 `
 
 export const Container = styled.article`
+transition: all 200ms ease-in-out;
 background-color: black;
 position: relative;
 border: 0.01em solid #939393;
 padding: 1em;
 border-radius: 0.3em;
+&:hover {
+  transition: all 200ms ease-in-out;
+  transform: scale(1.03);
+}
 `
 
 export const CardHeader = styled.header`
