@@ -10,6 +10,9 @@ const Title = styled.h1`
   color: white;
   font-size: 1.5rem;
   font-weight: 300;
+  @media (max-width: 1000px) {
+    text-align: center;
+  }
 `
 
 const Container = styled.section`

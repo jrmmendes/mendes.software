@@ -10,6 +10,11 @@ const Wrapper = styled.div`
   > * {
     width: 14rem;
   }
+  @media (max-width: 730px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `
 
 type Props = {

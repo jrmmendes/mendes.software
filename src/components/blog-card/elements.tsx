@@ -12,6 +12,7 @@ background-color: black;
 position: relative;
 border: 0.01em solid #939393;
 padding: 1em;
+margin-top: 2em;
 border-radius: 0.3em;
 &:hover {
   transition: all 200ms ease-in-out;
