@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import HamburgerMenu from 'react-hamburger-menu'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Link } from 'react-router-dom'
 import { Navigation, NavLink, Header } from './elements'
+import logo from './brand.svg'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -28,13 +29,17 @@ export default () => {
   return (
     <Wrapper>
       <Header>
-        <img src="" alt="Logo"/>
+        <Router>
+          <Link to="/">
+            <img src={logo} alt="Logo"/>
+          </Link>
+        </Router>
         <Burger
-          color="white"
-          isOpen={isOpen}
-          menuClicked={handleClick}
-          width={30}
-          height={24}
+        color="white"
+        isOpen={isOpen}
+        menuClicked={handleClick}
+        width={30}
+        height={24}
         />
       </Header>
       <Navigation className={ isOpen? 'is-nav-open' : ''}>
