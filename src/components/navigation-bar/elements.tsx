@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-
 export const Header = styled.header`
+  transition: all 200ms ease-in-out;
   position: relative;
   z-index: 1000;
   display: flex;
-  background: rgba(0,0,0);
+  background: rgba(0,0,0,0);
+  &.is-nav-open, &.is-scrolled {
+    transition: all 200ms ease-in-out;
+    background: rgba(0,0,0);
+  }
   height: 5vh;
   justify-content: space-between;
   padding: 2rem 2rem;
@@ -24,14 +28,14 @@ export const Navigation = styled.nav`
   align-items: center;
   justify-content: flex-start;
   padding-block-start: 4em;
-  transform: translateY(-100vh);
+  /*transform: translateY(-100vh);*/
   height: 0;
   opacity: 0;
   &.is-nav-open {
     transition: all 300ms ease-in-out;
     opacity: 1;
     height: 100vh;
-    transform: translateY(0);
+    /*transform: translateY(0);*/
   }
 `
 

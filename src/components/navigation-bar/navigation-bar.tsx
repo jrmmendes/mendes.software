@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import HamburgerMenu from 'react-hamburger-menu'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+
 import { Navigation, NavLink, Header } from './elements'
 import logo from './brand.svg'
 
@@ -21,14 +22,22 @@ const Burger = styled(HamburgerMenu)`
 export default () => {
   
   const [isOpen, setOpen] = useState(false)
+  const [isScrolled, setScrolled] = useState(false)
 
   const handleClick = () => {
     setOpen(!isOpen)
   }
 
+  useEffect(() => {
+    document.addEventListener('scroll', e => {
+      setScrolled(window.pageYOffset > 120 ? true : false)
+    })
+  })
+
   return (
     <Wrapper>
-      <Header>
+      <Header
+        className={`${isOpen? 'is-nav-open' : ''}${isScrolled ? 'is-scrolled': ''}`}>
         <AnchorLink href="#start">
           <img src={logo} alt="Logo"/>
         </AnchorLink>

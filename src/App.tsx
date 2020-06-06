@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router } from 'react-router-dom'
 
-import { PageSection } from './layouts/page-section'
+import { PageSection } from './components/page-section'
 import { BlogCardGroup } from './components/blog-card-group'
-import { GhostLink } from './components/ghost-link'
+import { OutlinedButton } from './components/button'
 
-import { NavigationBar } from './layouts/navigation-bar'
-import { HeroBanner } from './layouts/hero-banner'
+import { NavigationBar } from './components/navigation-bar'
+import { HeroBanner } from './components/hero-banner'
 
 import posts from './posts'
 
@@ -21,31 +21,29 @@ padding: 0;
 background: black;
 `
 
-function App() {
-  return (
-    <>
-      <NavigationBar />
-      <HeroBanner />
-      <Main>
-        <PageSection id="about" title='Latest From Blog'>
-          <BlogCardGroup cards={posts} />
-          <Router>
-            <GhostLink
-              className='disabled'
-              style={{
-                width: '14.4rem',
-                marginTop: '2em',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
-              to="">
-              All Posts (WIP)
-            </GhostLink>
-          </Router>
-        </PageSection>
-      </Main>
-    </>
-  )
-}
+const App = () => (
+  <>
+    <NavigationBar />
+    <HeroBanner />
+    <Main>
+      <PageSection id="blog" title='Latest From Blog'>
+        <BlogCardGroup cards={posts} />
+        <Router>
+          <OutlinedButton
+            href="https://dev.to/dotmendes/"
+            target="_NEW"
+            style={{
+              width: '14.4rem',
+              marginTop: '2em',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}>
+          All Posts
+        </OutlinedButton>
+      </Router>
+    </PageSection>
+  </Main>
+</>
+)
 
 export default App;
