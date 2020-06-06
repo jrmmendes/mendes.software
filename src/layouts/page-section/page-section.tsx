@@ -4,6 +4,7 @@ import styled from 'styled-components'
 type PageSectionProps = {
   children: any;
   title: string;
+  id: string;
 }
 
 const Title = styled.h1`
@@ -27,7 +28,7 @@ const Container = styled.section`
 
 export default function (props: PageSectionProps) {
   return (
-    <Container>
+    <Container id={props.id}>
       <Title>{props.title}</Title>
       {props.children}
     </Container>

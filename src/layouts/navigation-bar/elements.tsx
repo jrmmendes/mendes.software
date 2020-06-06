@@ -1,8 +1,10 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 export const Header = styled.header`
+  position: relative;
+  z-index: 1000;
   display: flex;
   background: rgba(0,0,0);
   height: 5vh;
@@ -20,7 +22,8 @@ export const Navigation = styled.nav`
   background: black;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-block-start: 4em;
   transform: translateY(-100vh);
   height: 0;
   opacity: 0;
@@ -32,7 +35,7 @@ export const Navigation = styled.nav`
   }
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled(AnchorLink)`
   transition: all 200ms ease-in-out;
   color: white;
   font-size: 3rem;

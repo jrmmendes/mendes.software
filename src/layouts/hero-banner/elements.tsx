@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 export const VideoBackground = styled.video`
 pointer-events: none;
@@ -44,7 +44,7 @@ strong {
   padding: 0.1em;
 }`
 
-export const DownArrowLink = styled(Link)`
+export const DownArrowLink = styled(AnchorLink)`
 display: inline-flex;
 justify-content: center;
 align-items: center;

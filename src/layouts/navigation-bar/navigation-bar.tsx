@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
 import HamburgerMenu from 'react-hamburger-menu'
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Navigation, NavLink, Header } from './elements'
 import logo from './brand.svg'
 
@@ -29,11 +29,9 @@ export default () => {
   return (
     <Wrapper>
       <Header>
-        <Router>
-          <Link to="/">
-            <img src={logo} alt="Logo"/>
-          </Link>
-        </Router>
+        <AnchorLink href="#start">
+          <img src={logo} alt="Logo"/>
+        </AnchorLink>
         <Burger
         color="white"
         isOpen={isOpen}
@@ -43,13 +41,10 @@ export default () => {
         />
       </Header>
       <Navigation className={ isOpen? 'is-nav-open' : ''}>
-        <Router>
-          <NavLink to="/about" onClick={handleClick} >About me</NavLink>
-          <NavLink to="/projects" onClick={handleClick} >Projects</NavLink>
-          <NavLink to="/contact" onClick={handleClick} >Contact</NavLink>
-          <NavLink to="/blog" onClick={handleClick} >Blog</NavLink>
-        <div style={{ height: '4rem' }}> </div>
-        </Router>
+        <NavLink offset="80" href="#about" onClick={handleClick} >About me</NavLink>
+        <NavLink offset="80" href="#projects" onClick={handleClick} >Projects</NavLink>
+        <NavLink offset="80" href="#contact" onClick={handleClick} >Contact</NavLink>
+        <NavLink offset="80" href="#blog" onClick={handleClick} >Blog</NavLink>
       </Navigation>
     </Wrapper>
   )

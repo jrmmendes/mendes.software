@@ -27,7 +27,7 @@ function App() {
       <NavigationBar />
       <HeroBanner />
       <Main>
-        <PageSection title='Latest From Blog'>
+        <PageSection id="about" title='Latest From Blog'>
           <BlogCardGroup cards={posts} />
           <Router>
             <GhostLink
