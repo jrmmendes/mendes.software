@@ -48,6 +48,7 @@ export default () => {
           <NavLink to="/projects" onClick={handleClick} >Projects</NavLink>
           <NavLink to="/contact" onClick={handleClick} >Contact</NavLink>
           <NavLink to="/blog" onClick={handleClick} >Blog</NavLink>
+        <div style={{ height: '4rem' }}> </div>
         </Router>
       </Navigation>
     </Wrapper>

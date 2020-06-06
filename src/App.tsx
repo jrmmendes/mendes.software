@@ -7,6 +7,7 @@ import { BlogCardGroup } from './components/blog-card-group'
 import { GhostLink } from './components/ghost-link'
 
 import { NavigationBar } from './layouts/navigation-bar'
+import { HeroBanner } from './layouts/hero-banner'
 
 import posts from './posts'
 
@@ -16,7 +17,6 @@ width: 100%;
 min-height: 100vh;
 box-sizing: border-box;
 margin: 0;
-margin-top: 5rem;
 padding: 0;
 background: black;
 `
@@ -25,6 +25,7 @@ function App() {
   return (
     <>
       <NavigationBar />
+      <HeroBanner />
       <Main>
         <PageSection title='Latest From Blog'>
           <BlogCardGroup cards={posts} />

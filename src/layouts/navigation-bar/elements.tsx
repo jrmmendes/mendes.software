@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const Header = styled.header`
   display: flex;
-  background: black;
+  background: rgba(0,0,0);
   height: 5vh;
   justify-content: space-between;
   padding: 2rem 2rem;
@@ -14,7 +14,7 @@ export const Header = styled.header`
 `
 
 export const Navigation = styled.nav`
-  transition: all 200ms ease-in-out;
+  transition: all 300ms ease-in-out;
   transform-origin: top;
   display: flex;
   background: black;
@@ -25,9 +25,9 @@ export const Navigation = styled.nav`
   height: 0;
   opacity: 0;
   &.is-nav-open {
+    transition: all 300ms ease-in-out;
     opacity: 1;
     height: 100vh;
-    transition: all 200ms ease-in-out;
     transform: translateY(0);
   }
 `
