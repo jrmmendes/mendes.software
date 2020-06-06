@@ -19,7 +19,9 @@ const Container = styled.section`
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 1rem 6rem;
+  @media (min-width: 500px) {
+    padding: 1rem 6rem;
+  }
   width: 100%;
 `
 

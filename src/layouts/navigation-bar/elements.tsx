@@ -7,7 +7,10 @@ export const Header = styled.header`
   background: black;
   height: 5vh;
   justify-content: space-between;
-  padding: 2rem 6rem;
+  padding: 2rem 2rem;
+  @media (min-width: 500px) {
+    padding: 2rem 6rem;
+  }
 `
 
 export const Navigation = styled.nav`

@@ -30,16 +30,21 @@ function App() {
           <BlogCardGroup cards={posts} />
           <Router>
             <GhostLink
-            className='disabled'
-            style={{ width: '14.4rem', marginTop: '2em' }}
-            to="">
-            All Posts (WIP)
-          </GhostLink>
-        </Router>
-      </PageSection>
-    </Main>
-  </>
-  );
+              className='disabled'
+              style={{
+                width: '14.4rem',
+                marginTop: '2em',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+              }}
+              to="">
+              All Posts (WIP)
+            </GhostLink>
+          </Router>
+        </PageSection>
+      </Main>
+    </>
+  )
 }
 
 export default App;
