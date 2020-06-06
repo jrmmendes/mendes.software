@@ -23,7 +23,7 @@ export const Navigation = styled.nav`
   opacity: 0;
   &.is-nav-open {
     opacity: 1;
-    height: 75vh;
+    height: 100vh;
     transition: all 200ms ease-in-out;
     transform: translateY(0);
   }
