@@ -9,7 +9,7 @@ type PageSectionProps = {
 
 const Title = styled.h1`
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   @media (max-width: 1000px) {
     text-align: center;
@@ -23,7 +23,6 @@ const Container = styled.section`
   @media (min-width: 500px) {
     padding: 1rem 6rem;
   }
-  width: 100%;
 `
 
 export default function (props: PageSectionProps) {

@@ -37,7 +37,7 @@ export default () => {
   return (
     <Wrapper>
       <Header
-        className={`${isOpen? 'is-nav-open' : ''}${isScrolled ? 'is-scrolled': ''}`}>
+        className={`${isOpen? 'is-nav-open .is-scrolled' : ''}${isScrolled ? 'is-scrolled': ''}`}>
         <AnchorLink href="#start">
           <img src={logo} alt="Logo"/>
         </AnchorLink>

@@ -8,11 +8,13 @@ import { OutlinedButton } from './components/button'
 
 import { NavigationBar } from './components/navigation-bar'
 import { HeroBanner } from './components/hero-banner'
+import { About } from './components/about'
 
 import posts from './posts'
 
 const Main = styled.main`
 display: flex;
+flex-direction: column;
 width: 100%;
 min-height: 100vh;
 box-sizing: border-box;
@@ -26,6 +28,9 @@ const App = () => (
     <NavigationBar />
     <HeroBanner />
     <Main>
+      <PageSection id="about" title="">
+        <About description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"/>
+      </PageSection>
       <PageSection id="blog" title='Latest From Blog'>
         <BlogCardGroup cards={posts} />
         <Router>
