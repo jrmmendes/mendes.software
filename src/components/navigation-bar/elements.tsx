@@ -28,14 +28,14 @@ export const Navigation = styled.nav`
   align-items: center;
   justify-content: flex-start;
   padding-block-start: 4em;
-  /*transform: translateY(-100vh);*/
+  transform: translateY(-100vh);
   height: 0;
   opacity: 0;
   &.is-nav-open {
     transition: all 300ms ease-in-out;
     opacity: 1;
     height: 100vh;
-    /*transform: translateY(0);*/
+    transform: translateY(0);
   }
 `
 

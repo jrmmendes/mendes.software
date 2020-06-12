@@ -1,19 +1,27 @@
 import React from 'react'
 import profile from './profile.png'
+import styled from 'styled-components'
 
 type AboutProps = {
   description: string;
 }
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  @media (min-width: 950px) {
+    flex-direction: row;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+`
+
+
 export default (props: AboutProps) => (
-  <div style={{
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingLeft: '4rem',
-    paddingRight: '4rem',
-    color: 'white',
-  }}>
+  <Wrapper>
     <img src={profile} />
     <div style={{
       paddingLeft: '2em',
@@ -27,5 +35,5 @@ export default (props: AboutProps) => (
         fontSize: '1.2em',
       }}>{props.description}</p>
     </div>
-  </div>
+  </Wrapper>
 ) 
