@@ -9,6 +9,7 @@ import { OutlinedButton } from './components/button'
 import { NavigationBar } from './components/navigation-bar'
 import { HeroBanner } from './components/hero-banner'
 import { About } from './components/about'
+import { Footer } from './components/footer'
 
 import posts from './posts'
 
@@ -50,6 +51,7 @@ const App = () => (
       </Router>
     </PageSection>
   </Main>
+  <Footer />
 </>
 )
 
