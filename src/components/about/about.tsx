@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 
 export default (props: AboutProps) => (
   <Wrapper>
-    <img alt="Profile Picture" src={profile} />
+    <img alt="Jr. Mendes" src={profile} />
     <div style={{
       paddingLeft: '2em',
       width: '80%',
