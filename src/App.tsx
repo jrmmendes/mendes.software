@@ -29,7 +29,9 @@ const App = () => (
     <HeroBanner />
     <Main>
       <PageSection id="about" title="">
-        <About description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor"/>
+        <About description="
+        Hi! My name is Junior, I'm a back-end web developer with 1 year of experience with Javascript and Node.js, and also some Django background (making use of Django REST Framework). I love DevOps and Open Source, so I've been using Linux for about 5 years and studying about Docker, CI/CD. I'm constantly trying to improve my knowledge."
+        />
       </PageSection>
       <PageSection id="blog" title='Latest From Blog'>
         <BlogCardGroup cards={posts} />
