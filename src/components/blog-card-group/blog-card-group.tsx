@@ -21,6 +21,7 @@ type Props = {
   cards: BlogCardProps[];
 }
 
+
 export default function BlogCardGroup(props: Props) {
   return (
     <Wrapper>
