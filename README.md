@@ -1,6 +1,8 @@
 # Mendes.Software
 <h4> Here you can find my portfolio page. Feel free to browse the code! </h4>
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/b99360275fb8da4f5970/maintainability)](https://codeclimate.com/github/jrmmendes/mendes.software/maintainability)
+
 *This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
 ## Available Scripts
