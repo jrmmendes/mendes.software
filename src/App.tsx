@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { BrowserRouter as Router } from 'react-router-dom'
-import axios from 'axios'
 
 import { PageSection } from './components/page-section'
 import { BlogCardGroup } from './components/blog-card-group'
@@ -31,10 +30,8 @@ const App = () => {
   const [posts, setPosts] = useState(initialPosts)
 
   useEffect(() => {
-    axios.get('https://dev.to/api/articles/me?per_page=4', {
-      headers: { 'api-key': 'b72DYD1PUZ7WLqoC5Q47xkdb' },
-    })
-    .then(response => response.data)
+    fetch('https://dev.to/api/articles/?username=dotmendes&per_page=4')
+    .then(response => response.json())
     .then(data => articleToBlogCard(data))
     .then(data => setPosts(data))
   }, [])

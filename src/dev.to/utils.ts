@@ -18,7 +18,7 @@ const formatTimestamp = (s: string) => {
 
 export const articleToBlogCard = (data: Article[]) => data.map(post => ({
   link: post.url,
-  tags: post.tag_list,
+  tags: post.tag_list.slice(0,2),
   briefing: post.description,
   title: post.title,
   timestamp: formatTimestamp(post.published_at),
