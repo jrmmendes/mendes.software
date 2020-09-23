@@ -28,13 +28,13 @@ export const Navigation = styled.nav`
   align-items: center;
   justify-content: flex-start;
   padding-block-start: 4em;
-  transform: translateY(-100vh);
-  height: 0;
+  overflow: hidden;
   opacity: 0;
+  height: 100vh;
+  transform: translateY(-100vh);
   &.is-nav-open {
-    transition: all 300ms ease-in-out;
+    transition: all 400ms ease-in-out;
     opacity: 1;
-    height: 100vh;
     transform: translateY(0);
   }
 `
