@@ -30,12 +30,14 @@ export const Navigation = styled.nav`
   padding-block-start: 4em;
   overflow: hidden;
   opacity: 0;
+  z-index: -1;
   height: 100vh;
   transform: translateY(-100vh);
   &.is-nav-open {
     transition: all 400ms ease-in-out;
     opacity: 1;
     transform: translateY(0);
+    z-index: 1;
   }
 `
 

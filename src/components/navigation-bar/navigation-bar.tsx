@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 10;
+  height: 0;
   width: 100%;
   color: white;
 `
