@@ -45,11 +45,9 @@ const App = () => {
       <Main>
         <PageSection id="about" title="">
           <About description="
-          Hi! My name is Junior, I'm a back-end web developer with 1 year of
-          experience with Javascript and Node.js, and also some Django background
-          (making use of Django REST Framework). I love DevOps and Open Source, so
-          I've been using Linux for about 5 years and studying about Docker, CI/CD.
-          I'm constantly trying to improve my knowledge."
+          Hi! My name is Junior and I'm a back-end web developer with almost 3 years of
+          experience coding Node.js and Django applications. I'm constantly trying to 
+          improve my knowledge and currently studying about the AWS and Azure cloud services."
           />
         </PageSection>
         <PageSection id="blog" title='Latest From Blog'>
