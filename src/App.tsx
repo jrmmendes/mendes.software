@@ -18,8 +18,6 @@ display: flex;
 flex-direction: column;
 width: 100%;
 min-height: 100vh;
-max-width: 1320px;
-margin: auto;
 box-sizing: border-box;
 margin: 0;
 padding: 0;
